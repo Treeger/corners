@@ -1,5 +1,5 @@
 # Corners game
-It is written on vanilla javascript + webpack
+It is written on vanilla javascript + webpack and HTML5 drag and drop
 
 For installation run `npm install` and `webpack`
 
