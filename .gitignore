@@ -1,4 +1,4 @@
 .idea/
 node_modules/
 debug.js
-.map
+public/app.js.map
