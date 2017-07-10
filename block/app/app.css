@@ -54,6 +54,6 @@ h1{
 }
 
 body{
-    background-image: url('/images/bg.png');
+    background-image: url('../../images/bg.png');
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
