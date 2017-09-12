@@ -1,4 +1,5 @@
 function dragStart(ev) {
+    ev.preventDefault();
     let color = this.dataset.color;
     let isWhiteTurn = game.getIsWhiteTurn();
     if (color === 'white' && isWhiteTurn === true || color === 'black' && isWhiteTurn === false) {
@@ -7,13 +8,13 @@ function dragStart(ev) {
         ev.dataTransfer.setData("Text", ev.target.getAttribute('id'));
         return true;
     } else {
-        ev.preventDefault();
         return false;
     }
 
 }
 
 function dragOver(ev) {
+    ev.preventDefault();
     if (ev.target.tagName === 'TD') {
 
         if (!ev.target.querySelector('img')) {
@@ -25,6 +26,7 @@ function dragOver(ev) {
 }
 
 function dragLeave(ev) {
+    ev.preventDefault();
     if (ev.target.tagName === 'TD') {
         ev.target.classList.remove('hovered');
     }
@@ -32,7 +34,7 @@ function dragLeave(ev) {
 
 
 function dragDrop(ev) {
-
+    ev.preventDefault();
     if (this.childElementCount !== 1) {
         let data = ev.dataTransfer.getData("Text");
         let figure = document.getElementById(data);
